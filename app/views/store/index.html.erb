@@ -1,6 +1,13 @@
-<h1>Store#index</h1>
+<h1>Our lovely pets:</h1>
+<ul class="thumbnails">
 <% @products.each do |product| %>
-  <div class="entry">
-    <h3><%= product.title %></h3>
-  </div>
+	<li class="span4">
+		<div class="thumbnail">
+			<img data-src="holder.js/300x200" alt="">
+			<span class="label price pull-right"><%= number_to_currency(product.price) %></span>
+			<h3><%= product.title %></h3>
+			<p><%= product.description %></p>
+		</div>
+	</li>
 <% end %>
+</ul>
