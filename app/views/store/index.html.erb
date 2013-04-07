@@ -1,7 +1,7 @@
 <h1>Our lovely pets:</h1>
 <ul class="thumbnails">
 <% @products.each do |product| %>
-	<li class="span4">
+	<li class="span4 entry">
 		<div class="thumbnail">
 			<img data-src="holder.js/300x200" alt="">
 			<span class="label price pull-right"><%= number_to_currency(product.price) %></span>
