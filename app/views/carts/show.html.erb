@@ -1,0 +1,22 @@
+<div class="alert alert-success"><%= notice %></div>
+
+<table class="table  table-bordered table-hover">
+	<tr>
+		<th>Product</th>
+		<th>Price</th>
+		<th>action</th>
+	</tr>
+<% @cart.line_items.each do |item| %>
+	<tr>
+		<td>
+			<%= item.product.title %>
+		</td>
+		<td>
+			<%= item.product.price %>
+		</td>
+		<td></td>
+	</tr>
+<% end %>
+</table>
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
