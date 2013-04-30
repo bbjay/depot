@@ -16,3 +16,7 @@
 body {
 	padding: 20px;
 }
+
+[class^="icon-"], [class*=" icon-"] {
+  background-image: url(/assets/glyphicons-halflings.png)
+}

@@ -10,4 +10,8 @@ class Cart < ActiveRecord::Base
     end
     current_item
   end
+
+  def get_item_count()
+    line_items.sum('quantity')
+  end
 end

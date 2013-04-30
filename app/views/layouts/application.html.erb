@@ -16,6 +16,14 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
+				<ul class="nav pull-right">
+					<li>
+						<a href="<%= cart_path(session[:cart_id]) %>">
+							<i class="icon-shopping-cart"></i>
+							(<%= current_cart.get_item_count %>)
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 
