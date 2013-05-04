@@ -11,6 +11,18 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
+  def remove_product(product_id)
+    current_item = line_items.find_by_product_id(product_id)
+    if current_item
+      if current_item.quantity > 1
+        current_item.quantity -= 1
+        current_item.save
+      else
+        current_item.destroy
+      end
+    end
+  end
+
   def get_item_count()
     line_items.sum('quantity')
   end
