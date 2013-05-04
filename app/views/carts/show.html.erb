@@ -5,8 +5,9 @@
 <table class="table  table-bordered table-hover">
 	<tr>
 		<th>Product</th>
-		<th>Quantity</th>
 		<th>Price</th>
+		<th>Quantity</th>
+		<th>Total Price</th>
 		<th>action</th>
 	</tr>
 <% @cart.line_items.each do |item| %>
@@ -15,13 +16,21 @@
 			<%= item.product.title %>
 		</td>
 		<td>
+			<%= number_to_currency item.product.price %>
+		</td>
+		<td>
 			<%= item.quantity %>
 		</td>
 		<td>
-			<%= item.product.price %>
+			<%= number_to_currency item.total_price %>
 		</td>
 		<td></td>
 	</tr>
 <% end %>
+	<tr>
+		<td colspan="3"></td>
+		<td><b><%= number_to_currency @cart.total %></b></td>
+		<td></td>
+	</tr>
 </table>
 <%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?', :class=>"btn btn-danger btn-mini"%>
