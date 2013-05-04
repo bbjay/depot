@@ -1,3 +1,6 @@
+<% if notice %>
+<div class="alert alert-error"><%= notice %></div>
+<% end %>
 <h1>Our lovely pets:</h1>
 <ul class="thumbnails">
 <% @products.each do |product| %>
