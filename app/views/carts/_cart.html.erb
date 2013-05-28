@@ -1,5 +1,5 @@
-						<a href="<%= cart_path(current_cart.id) %>">
-							<i class="icon-shopping-cart"></i>
-							<%= number_to_currency current_cart.total %>
-							(<%= current_cart.get_item_count %> Produkte)
-						</a>
+<a href="<%= cart_path(current_cart.id) %>">
+	<i class="icon-shopping-cart"></i>
+	<%= number_to_currency current_cart.total %>
+	(<%= current_cart.get_item_count %> Produkte)
+</a>
