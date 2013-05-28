@@ -17,11 +17,8 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li>
-						<a href="<%= cart_path(current_cart.id) %>">
-							<i class="icon-shopping-cart"></i>
-							(<%= current_cart.get_item_count %>)
-						</a>
+					<li id="cart">
+						<%= render current_cart %>
 					</li>
 				</ul>
 			</div>
